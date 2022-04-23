@@ -28,35 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.scoreText = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.finishPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.startPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.finishPictureBox = new System.Windows.Forms.PictureBox();
             this.grid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.finishPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finishPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // scoreText
             // 
             this.scoreText.AutoSize = true;
             this.scoreText.BackColor = System.Drawing.Color.Transparent;
-            this.scoreText.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.scoreText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.scoreText.Location = new System.Drawing.Point(198, 9);
             this.scoreText.Name = "scoreText";
             this.scoreText.Size = new System.Drawing.Size(78, 25);
@@ -66,6 +65,7 @@
             // grid
             // 
             this.grid.BackColor = System.Drawing.Color.Transparent;
+            this.grid.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.grid.ColumnCount = 3;
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -85,87 +85,97 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.grid.Size = new System.Drawing.Size(500, 500);
             this.grid.TabIndex = 1;
             // 
+            // finishPictureBox
+            // 
+            this.finishPictureBox.Location = new System.Drawing.Point(337, 5);
+            this.finishPictureBox.Name = "finishPictureBox";
+            this.finishPictureBox.Size = new System.Drawing.Size(158, 157);
+            this.finishPictureBox.TabIndex = 8;
+            this.finishPictureBox.TabStop = false;
+            this.finishPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.finishPictureBox_MouseClick);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(171, 5);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(157, 157);
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox7_MouseClick);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(157, 157);
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseClick);
+            // 
             // startPictureBox
             // 
-            this.startPictureBox.Location = new System.Drawing.Point(3, 335);
+            this.startPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.startPictureBox.BackgroundImage = global::PixelsGame.Properties.Resources.start;
+            this.startPictureBox.Location = new System.Drawing.Point(5, 337);
             this.startPictureBox.Name = "startPictureBox";
-            this.startPictureBox.Size = new System.Drawing.Size(160, 162);
+            this.startPictureBox.Size = new System.Drawing.Size(157, 158);
             this.startPictureBox.TabIndex = 0;
             this.startPictureBox.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(169, 335);
+            this.pictureBox1.Location = new System.Drawing.Point(171, 337);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 158);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(335, 335);
+            this.pictureBox2.Location = new System.Drawing.Point(337, 337);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(160, 162);
+            this.pictureBox2.Size = new System.Drawing.Size(158, 158);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(3, 169);
+            this.pictureBox3.Location = new System.Drawing.Point(5, 171);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox3.Size = new System.Drawing.Size(157, 157);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(169, 169);
+            this.pictureBox4.Location = new System.Drawing.Point(171, 171);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox4.Size = new System.Drawing.Size(157, 157);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(335, 169);
+            this.pictureBox5.Location = new System.Drawing.Point(337, 171);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox5.Size = new System.Drawing.Size(158, 157);
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(169, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            // 
-            // finishPictureBox
-            // 
-            this.finishPictureBox.Location = new System.Drawing.Point(335, 3);
-            this.finishPictureBox.Name = "finishPictureBox";
-            this.finishPictureBox.Size = new System.Drawing.Size(160, 160);
-            this.finishPictureBox.TabIndex = 8;
-            this.finishPictureBox.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(578, 574);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.scoreText);
@@ -175,15 +185,15 @@
             this.Text = "Pixels";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.finishPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finishPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
