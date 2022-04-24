@@ -39,6 +39,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.endPicture = new System.Windows.Forms.PictureBox();
             this.grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.finishPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -49,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // scoreText
@@ -171,12 +173,22 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
             // 
+            // endPicture
+            // 
+            this.endPicture.Location = new System.Drawing.Point(-1, 37);
+            this.endPicture.Name = "endPicture";
+            this.endPicture.Size = new System.Drawing.Size(577, 535);
+            this.endPicture.TabIndex = 2;
+            this.endPicture.TabStop = false;
+            this.endPicture.Visible = false;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(578, 574);
+            this.Controls.Add(this.endPicture);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.scoreText);
             this.Font = new System.Drawing.Font("Verdana", 10F);
@@ -194,6 +206,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,6 +225,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox endPicture;
     }
 }
 
