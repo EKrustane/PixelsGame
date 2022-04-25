@@ -30,6 +30,11 @@
         {
             this.scoreText = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.score1 = new System.Windows.Forms.Label();
+            this.point = new System.Windows.Forms.Label();
+            this.score2 = new System.Windows.Forms.Label();
+            this.restartButton = new System.Windows.Forms.Button();
+            this.endPicture = new System.Windows.Forms.PictureBox();
             this.finishPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -39,8 +44,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.endPicture = new System.Windows.Forms.PictureBox();
             this.grid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.endPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finishPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -50,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // scoreText
@@ -90,6 +94,55 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.grid.Size = new System.Drawing.Size(500, 500);
             this.grid.TabIndex = 1;
+            // 
+            // score1
+            // 
+            this.score1.AutoSize = true;
+            this.score1.Location = new System.Drawing.Point(273, 9);
+            this.score1.Name = "score1";
+            this.score1.Size = new System.Drawing.Size(25, 25);
+            this.score1.TabIndex = 3;
+            this.score1.Text = "0";
+            // 
+            // point
+            // 
+            this.point.AutoSize = true;
+            this.point.Location = new System.Drawing.Point(353, 9);
+            this.point.Name = "point";
+            this.point.Size = new System.Drawing.Size(73, 25);
+            this.point.TabIndex = 4;
+            this.point.Text = "label1";
+            // 
+            // score2
+            // 
+            this.score2.AutoSize = true;
+            this.score2.Location = new System.Drawing.Point(433, 9);
+            this.score2.Name = "score2";
+            this.score2.Size = new System.Drawing.Size(25, 25);
+            this.score2.TabIndex = 5;
+            this.score2.Text = "0";
+            // 
+            // restartButton
+            // 
+            this.restartButton.BackColor = System.Drawing.Color.Black;
+            this.restartButton.ForeColor = System.Drawing.Color.White;
+            this.restartButton.Location = new System.Drawing.Point(230, 520);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(120, 40);
+            this.restartButton.TabIndex = 6;
+            this.restartButton.Text = "RESTART";
+            this.restartButton.UseVisualStyleBackColor = false;
+            this.restartButton.Visible = false;
+            this.restartButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.restartButton_MouseClick);
+            // 
+            // endPicture
+            // 
+            this.endPicture.Location = new System.Drawing.Point(-1, 39);
+            this.endPicture.Name = "endPicture";
+            this.endPicture.Size = new System.Drawing.Size(577, 455);
+            this.endPicture.TabIndex = 2;
+            this.endPicture.TabStop = false;
+            this.endPicture.Visible = false;
             // 
             // finishPictureBox
             // 
@@ -173,21 +226,16 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
             // 
-            // endPicture
-            // 
-            this.endPicture.Location = new System.Drawing.Point(-1, 37);
-            this.endPicture.Name = "endPicture";
-            this.endPicture.Size = new System.Drawing.Size(577, 535);
-            this.endPicture.TabIndex = 2;
-            this.endPicture.TabStop = false;
-            this.endPicture.Visible = false;
-            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(578, 574);
+            this.Controls.Add(this.restartButton);
+            this.Controls.Add(this.score2);
+            this.Controls.Add(this.point);
+            this.Controls.Add(this.score1);
             this.Controls.Add(this.endPicture);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.scoreText);
@@ -197,6 +245,7 @@
             this.Text = "Pixels";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.endPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finishPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -206,7 +255,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,6 +274,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox endPicture;
+        private System.Windows.Forms.Label score1;
+        private System.Windows.Forms.Label point;
+        private System.Windows.Forms.Label score2;
+        private System.Windows.Forms.Button restartButton;
     }
 }
 
